@@ -1,0 +1,22 @@
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px 'Roboto', sans-serif;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 25px;
+  background-color: #045700;
+  color: #ffffff;
+  border: 1px solid #045700;
+  border-radius: 20%;
+}
