@@ -15,15 +15,10 @@ startBtnRef.addEventListener("click", onStartChangeColor);
 stopBtnRef.addEventListener("click", onStopChangeColor);
 
 let id = null;
-let isActive = false;
 
 function onStartChangeColor() {
-    if (isActive) {
-        return;
-    };
-    
-    isActive = true;
     id = setInterval(changeColor, 1000);
+    startBtnRef.setAttribute("disabled", true);
 };
 
 function changeColor() {
@@ -36,10 +31,6 @@ function randomIntegerFromInterval(min, max) {
 };
 
 function onStopChangeColor() {
-    if (!isActive) {
-        return;
-    };    
-    
-    isActive = false;
     clearInterval(id);
+    startBtnRef.removeAttribute("disabled");
 };
